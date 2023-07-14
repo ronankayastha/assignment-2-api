@@ -1,0 +1,61 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Edit page -->
+<div class="container" style="background-color: #e3f2fd;">
+    <div class="jumbotron" style="background-color: #e3f2fd;">
+        <div class="row">
+            <div class="offset-md-3 col-md-4">
+                <h2><%= title %></h2>
+
+                <form class="form" method="POST">
+                    <div class="form-group">
+                        <label for="nameTextField">Contact Name</label>
+                        <input type="text" class="form-control"
+                        id="nameTextField"
+                        placeholder="Enter the Contact Name"
+                        name="cname"
+                        value="<%= book.cname %>"
+                        required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authorTextField">Contact Number</label>
+                        <input type="text" class="form-control"
+                        id="authorTextField"
+                        placeholder="Enter the Contact Number"
+                        name="cnumber" 
+                        value="<%= book.cnumber %>"
+                        required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publishedTextField">Email</label>
+                        <input type="text" class="form-control"
+                        id="publishedTextField"
+                        placeholder="Enter the Email"
+                        name="email" 
+                        value="<%= book.email %>"
+                        required>
+                    </div>              
+                
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-edit"></i> Update</button>
+                    
+                        <a href="/book-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+                        
+                        <a href="/book-list" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i> Delete</a>
+                        
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/bottom_nav.ejs %>  
+  
+<%- include ../partials/footer.ejs %>
